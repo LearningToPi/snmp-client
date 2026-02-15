@@ -21,7 +21,7 @@ LABEL org.opencontainers.image.documentation="/README.md"
 # Added net-tools to use netstat to verify the service is listening for healthchecks
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y &&  \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y snmp libsnmp-base mysql-client snmp-mibs-downloader && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y snmp libsnmp-base mysql-client snmp-mibs-downloader tzdata && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y net-tools && \
     DEBIAN_FRONTEND=noninteractive apt-get clean -y
 
